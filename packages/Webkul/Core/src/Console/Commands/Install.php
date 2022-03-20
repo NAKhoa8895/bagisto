@@ -184,7 +184,7 @@ class Install extends Command
         if ($data) {
             foreach ($data as $line) {
                 $line = preg_replace('/\s+/', '', $line);
-                $rowValues = explode('=', $line);
+                $rowValues = explode('=', $line, 2);
 
                 if (strlen($line) !== 0) {
                     if (strpos($key, $rowValues[0]) !== false) {
